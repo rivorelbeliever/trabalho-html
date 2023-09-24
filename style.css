@@ -127,7 +127,7 @@
 
 .marketing-clube{
     width: 99vw;
-    height: 100vh;
+    height: 105vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -164,6 +164,7 @@
 .beneficios-clube ul{
     display: flex;
     justify-content: center;
+    
 
 }
 
@@ -178,6 +179,7 @@
     justify-content: space-around;
 }
 .beneficios-clube strong{
+    margin-bottom: 5vh;
     
 }
 
@@ -221,11 +223,10 @@
 
 .depoimentos-container{
     width: 99vw;
-    height: 100%;
+    height: 105vh;
     display: flex;
     color: white;
-    max-height: 100%;
-    max-width: 100%;
+    background-color: rgba(25,25,25,255);
    
 }   
 
