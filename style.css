@@ -9,50 +9,19 @@
     font-style: normal;
 
 }
-
-@media only screen and (max-width: 959px) {
-    p{
-        font-size: 60px;
-    }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 959px) {
-    p{
-        font-size: 60px;
-    }
-}
-
-@media only screen and (max-width: 767px) {
-    p{
-        font-size: 45px;
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    p{
-        font-size: 45px;
-    }
-}
-
-@media only screen and (max-width: 479px) {
-    p{
-        font-size: 30px;
-    }
-}
-
 *{
     margin: 0;
-    padding: 0;
+    padding: 0; 
     border: 0;
-    width: 100%;
-    height: 100%;
-
 }
 
-
+body{
+    background-color: rgba(25,25,25,255);
+    overflow: hidden;
+}
 .landingpage{
     display: flex;
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -81,7 +50,7 @@
     width: 35vw;
     background-color: rgba(25,25,25,255);
     max-height: 100vh;
-    max-width: 99vw;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -126,7 +95,7 @@
 
 
 .marketing-clube{
-    width: 99vw;
+    width: 100vw;
     height: 105vh;
     display: flex;
     flex-direction: column;
@@ -231,7 +200,7 @@
 }   
 
 .depoimentos-container > div{
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -267,7 +236,7 @@
 
 
 .contato{
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -299,7 +268,7 @@
 .aba-contato h1{
     display: flex;
     height: auto;
-    width: 12vw;
+    width: 13vw;
     
 
 }
@@ -429,4 +398,61 @@
     position:relative;
     top: 15vh;
     right: 10vh;
+}
+
+
+/*ROLAR PAGINA*/
+#radio-nav-1, #radio-nav-1+span{left: 0%;}
+#radio-nav-2, #radio-nav-2+span{left: 20%;}
+#radio-nav-3, #radio-nav-3+span{left: 40%;}
+#radio-nav-4, #radio-nav-4+span{left: 60%;}
+#radio-nav-5, #radio-nav-5+span{left: 80%;}
+
+#radio-nav-1:checked ~ .scroll{
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+
+}
+#radio-nav-2:checked ~ .scroll{
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+}
+
+#radio-nav-3:checked ~ .scroll{
+    transform: translateY(-200%);
+    -webkit-transform: translateY(-200%);
+}
+
+#radio-nav-4:checked ~ .scroll{
+    transform: translateY(-300%);
+    -webkit-transform: translateY(-300%);
+}
+
+#radio-nav-5:checked ~ .scroll{
+    transform: translateY(-400%);
+    -webkit-transform: translateY(-400%);
+}
+
+
+/*animacao*/
+#radio-nav-1:checked ~ .scroll #pg-1,
+#radio-nav-2:checked ~ .scroll #pg-2,
+#radio-nav-3:checked ~ .scroll #pg-3,
+#radio-nav-4:checked ~ .scroll #pg-4,
+#radio-nav-5:checked ~ .scroll #pg-5{
+    animation: animeDown .7s ease-in-out .4s backwards;
+    -webkit-animation: animeDown .7s ease-in-out .4s backwards;
+}
+
+@keyframes animeDown{
+    0%{
+        transform: translateY(-100px);
+        -webkit-transform: translateY(-100px);
+        opacity: 0;        
+    }
+    100%{
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        opacity: 1;
+    }
 }
